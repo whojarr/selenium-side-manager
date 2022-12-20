@@ -1,0 +1,19 @@
+image: python:latest
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+cache:
+  paths:
+    - .cache/pip
+
+build:
+  script:
+    - python --version  # For debugging
+    - poetry install
+    - side-project-split
+    - side-projects-rebuild
+
+run:
+  script:
+    - selenium-side-runner -c "goog:chromeOptions.args=[headless,debug-devtools,ignore-certificate-errors] browserName=chrome acceptInsecureCerts=true" some.side

@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "selenium-side-manager"
+version = "0.1.0"
+description = ""
+authors = ["David Hunter <davidhunter@catalyst.net.nz>"]
+packages = [
+    { include = "selenium_side_manager" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+side-project-split = "selenium_side_manager.project_split:run"
+side-projects-rebuild = "selenium_side_manager.projects_rebuild:run"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
