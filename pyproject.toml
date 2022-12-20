@@ -1,11 +1,18 @@
+
+
 [tool.poetry]
 name = "selenium-side-manager"
-version = "0.1.0"
-description = ""
+version = "0.1.1"
+description = "Various tools to manipulate .side test files and avoid test duplication across projects"
+readme = "README.md"
 authors = ["David Hunter <davidhunter@catalyst.net.nz>"]
+homepage = "https://github.com/whojarr/selenium-side-manager"
+license = "GPL-3.0-or-later"
+keywords = ["selenium", "ide", "tools"]
 packages = [
     { include = "selenium_side_manager" }
 ]
+repository = "https://github.com/whojarr/selenium-side-manager/"
 
 [tool.poetry.dependencies]
 python = "^3.8"
